@@ -15,28 +15,58 @@ This code allows you to download torrents directly to your Google Drive using Go
 - A Google account with access to Google Drive and Google Colab
 - A magnet link for the torrent you want to download
 
+- Python 3.x
+- libtorrent
+
+## Installation
+
+1. Install the required libraries by running `!pip install libtorrent-python google-colab`.
+
+2. Mount your Google Drive by running `from google.colab import drive; drive.mount('/content/drive')` and following the instructions.
+
+3. Set the `save_path` variable in the script to the desired location on your Google Drive where you want to save the downloaded files.
+
 ## How to Use
 
-1. Open the code in Google Colab.
-2. Run the first cell to install the `libtorrent` library and mount your Google Drive.
-3. When prompted, enter the magnet link of the torrent you want to download or 'exit' to quit.
-4. If you enter an invalid magnet link, the code will display an error message and prompt you to try again.
-5. The code will download the torrent and display a progress bar and information about the downloaded file.
+1. Run the script.
+
+2. Select an option from the main menu:
+    - Enter Magnet link: Enter a magnet link to download a torrent.
+    - Upload Torrent file: Upload a torrent file to download a torrent.
+    - File Options: View file details such as "File Name," "Extension," "File Size," and "File Link" (which displays the downloaded magnet link).
+    - Exit: Exit the program.
+
+3. If you selected "Enter Magnet link" or "Upload Torrent file," follow the prompts to enter a magnet link or upload a torrent file.
+
+4. The script will start downloading the torrent and display a progress bar.
+
+5. After the download is complete, you can view file details by selecting "File Options" from the main menu.
+
+6. When you are finished, select "Exit" from the main menu to exit the program.
 
 ## Code Components
-
-- `libtorrent`: A library for downloading and uploading torrents
-- `google.colab.drive`: A module for mounting Google Drive in Google Colab
-- `tqdm`: A library for displaying progress bars
+The code consists of several components:
+- Importing necessary libraries: `libtorrent`, `time`, `re`, `os`, `pickle`, `google.colab.drive`, `google.colab.files`, and `tqdm`.
+- Mounting Google Drive and setting up session parameters.
+- Defining regular expression pattern for validating magnet links.
+- Loading resume data from previous sessions.
+- Displaying main menu and handling user input.
+- Downloading torrents using magnet links or torrent files.
+- Displaying progress bar while downloading.
+- Saving resume data for future sessions.
+- Displaying file options menu and showing file details.
 
 ## Acknowledgments
+
+This project was inspired by various open-source torrent downloader projects.
 
 This code was developed with the help of online resources and examples. Special thanks to the developers of the `libtorrent`, `google.colab`, and `tqdm` libraries for their contributions.
 
 ## License
 
-This code is released under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License.
 
 ## Disclaimer
 
 Please note that downloading and sharing copyrighted material without permission is illegal in many countries. Make sure you have the right to download and share the content before using this code.
+
