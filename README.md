@@ -1,3 +1,5 @@
+![maintenance-status](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)
+
 # CoLab-Torrent-Downloader-Pro
 
 This code allows you to download torrents directly to your Google Drive using Google Colab.
@@ -31,10 +33,11 @@ This code allows you to download torrents directly to your Google Drive using Go
 1. Run the script.
 
 2. Select an option from the main menu:
-    - Enter Magnet link: Enter a magnet link to download a torrent.
-    - Upload Torrent file: Upload a torrent file to download a torrent.
-    - File Options: View file details such as "File Name," "Extension," "File Size," and "File Link" (which displays the downloaded magnet link).
-    - Exit: Exit the program.
+
+   - Enter Magnet link: Enter a magnet link to download a torrent.
+   - Upload Torrent file: Upload a torrent file to download a torrent.
+   - File Options: View file details such as "File Name," "Extension," "File Size," and "File Link" (which displays the downloaded magnet link).
+   - Exit: Exit the program.
 
 3. If you selected "Enter Magnet link" or "Upload Torrent file," follow the prompts to enter a magnet link or upload a torrent file.
 
@@ -45,7 +48,9 @@ This code allows you to download torrents directly to your Google Drive using Go
 6. When you are finished, select "Exit" from the main menu to exit the program.
 
 ## Code Components
+
 The code consists of several components:
+
 - Importing necessary libraries: `libtorrent`, `time`, `re`, `os`, `pickle`, `google.colab.drive`, `google.colab.files`, and `tqdm`.
 - Mounting Google Drive and setting up session parameters.
 - Defining regular expression pattern for validating magnet links.
@@ -69,4 +74,3 @@ This project is licensed under the MIT License.
 ## Disclaimer
 
 Please note that downloading and sharing copyrighted material without permission is illegal in many countries. Make sure you have the right to download and share the content before using this code.
-
